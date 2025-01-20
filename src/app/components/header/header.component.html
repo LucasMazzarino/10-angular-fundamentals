@@ -1,14 +1,31 @@
 <header class="header">
-  <nav>
-    <app-menu />
+  <nav class="header__nav" aria-label="Main Navigation">
+    <div class="progress-container">
+      <div class="progress-bar" [style.width.%]="progress"></div>
+    </div>
+
+    <menu class="menu">
+      <li class="menu__item menu__item--logo">
+        <a class="menu__link" href="#" aria-label="Ir al Home">
+          <img src="./images/logo.png" alt="Logo de la página" class="menu__logo">
+        </a>
+      </li>
+      <li class="menu__item menu__item--links">
+        <ul class="menu__links">
+          <li class="menu__link-item">
+            <a class="menu__link" href="#" aria-label="Ir al Profile">01. Profile</a>
+          </li>
+          <li class="menu__link-item">
+            <a class="menu__link" href="#" aria-label="Ir al Work">02. Work</a>
+          </li>
+          <li class="menu__link-item">
+            <a class="menu__link" href="#" aria-label="Ir al Contact">✻ Contact</a>
+          </li>
+          <li class="menu__link-item">
+            <a class="menu__link" href="#" aria-label="Ir a LinkedIn">✻ LinkedIn</a>
+          </li>
+        </ul>
+      </li>
+    </menu>
   </nav>
-  <div class="header__actions">
-    <a class="header__link" href="#">Sign In</a>
-    <button class="header__button">
-      <span>Get started</span>
-      <i aria-hidden="true">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" class="main-nav__link__icon"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m16 11-4 4-4-4M12 13.5v-9M4 20h16"></path></g></svg>
-      </i>
-    </button>
-  </div>
 </header>

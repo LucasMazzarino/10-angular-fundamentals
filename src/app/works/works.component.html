@@ -1,0 +1,53 @@
+<main>
+  <section class="works">
+    <div class="works__resume">
+      <a href="https://static1.squarespace.com/static/5e2e7365bbda8d2962233262/t/64da6352cfe73e7cb44221e4/1692033876958/Taiki-Murayama-2023-Resume.pdf" target="_blank" class="works__resume works__resume--link">✻ View resume</a>
+    </div>
+    @for (work of works; track $index){
+
+    <article
+      class="works__content"
+      [class.is-open]="work.isOpen"
+    >
+      <h3 class="works__name">{{ work.name }}</h3>
+      @if (work.extraInfo == ''){
+        <div class="works__details">
+          <em class="works__date">{{ work.date }}</em>
+          <div class="works__details-wrapper">
+            <small class="works__type">{{ work.type }}</small>
+          </div>
+        </div>
+      }@else {
+        <div class="works__details">
+          <button
+            class="works__toggle"
+            aria-label="Abrir descripción"
+            (click)="toggleItem($index)"
+          >
+            <em class="works__date">{{ work.date }}</em>
+            <div class="works__details-wrapper">
+              <small class="works__type">{{ work.type }}</small>
+              <div
+                class="works__icon works__icon--container"
+                [class.is-open]="work.isOpen"
+                aria-hidden="true"
+              >
+                <div class="plus">
+                  <div class="plus__vertical-line"></div>
+                  <div class="plus__horizontal-line"></div>
+                </div>
+              </div>
+            </div>
+          </button>
+  
+          <div class="works__extra-info" [class.is-open]="work.isOpen">
+            <p class="works__extra-text">{{ work.extraInfo }}</p>
+          </div>
+        </div>
+      }
+      
+    </article>
+  }
+  </section>
+
+</main>

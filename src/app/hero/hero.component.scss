@@ -1,0 +1,148 @@
+
+
+.hero {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    height: 100vh;
+    text-align: center;
+    position: relative;
+    max-width: 1500px;
+    margin: auto;
+  
+    &__content {
+      grid-column: 1 / -1;
+      grid-row: 1 / -1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+    }
+  
+    &__title {
+      font-family: 'Helvetica Neue', Helvetica, sans-serif;
+      font-size: 120px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      letter-spacing: -0.4rem;
+      line-height: .75;
+      position: relative;
+      bottom: -20px;
+      padding-top: 30px;
+      width: 100%;
+    }
+  
+    &__design {
+      font-family: 'FHPhemister-Bold';
+      font-weight: 300;
+    }
+  
+    &__image {
+      height: 220px;
+      width: auto;
+      z-index: 0;
+      border-radius: 20px;
+      position: relative;
+      object-fit: cover;
+  
+      &--1 {
+        grid-column: 14 / 24;
+        grid-row: 2 / 8;
+        z-index: 2;
+        width: 210px;
+        top: 30px;
+        left: -20px;
+      }
+  
+      &--2 {
+        grid-column: 16 / 24;
+        grid-row: 3 / 8;
+        z-index: 1;
+        height: 220px;
+        width: 500px;
+      }
+  
+      &--3 {
+        grid-column: 1 / 8;
+        grid-row: 3 / 12;
+        display: block;
+        height: 300px;
+        max-width: 360px;
+        top: -20px;
+        left: -130px;
+      }
+  
+      &--4 {
+        grid-column: 1 / 16;
+        grid-row: 8 / 13;
+        left: -60px;
+        z-index: 2;
+        bottom: 30px;
+      }
+  
+      &--5 {
+        grid-column: 2 / 24;
+        grid-row: 9 / 13;
+        top: 30px;
+      }
+  
+      &--6 {
+        grid-column: 7 / 22;
+        grid-row: 9 / 16;
+        height: 320px;
+        width: 280px;
+        bottom: 20px;
+        left: 9px;
+      }
+  
+      &--7 {
+        grid-column: 16 / 25;
+        grid-row: 9 / 12;
+      }
+  
+      &--8 {
+        grid-column: 19 / 25;
+        grid-row: 8 / 12;
+        background-color: #efefef;
+        height: 270px;
+      }
+    }
+  }
+
+  .experience {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    gap: 2rem;
+    padding: 4rem 0;
+    margin-bottom: 8rem;
+  
+    &__container {
+      max-width: 400px;
+      margin: 0 3rem;
+  
+      &--name {
+        grid-column: 1 / 10;
+        letter-spacing: -1px;
+        width: 370px;
+      }
+  
+      &--companies {
+        grid-column: 12 / 25;
+      }
+    }
+  
+    &__name {
+      font-size: 17px;
+      text-indent: 2rem;
+      font-weight: 300;
+    }
+  
+    &__companies {
+      width: 820px;
+      font-size: 1.9rem;
+      line-height: 1.1;
+      font-weight: 400;
+    }
+  }
+  

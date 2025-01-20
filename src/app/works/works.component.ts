@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Work } from '../interface/work.interface';
+import { WorkItemComponent } from '../work-item/work-item.component';
 
 @Component({
   selector: 'app-works',
-  imports: [CommonModule], 
+  imports: [WorkItemComponent,CommonModule], 
   templateUrl: './works.component.html',
   styleUrls: ['./works.component.scss']
 })
@@ -75,7 +76,10 @@ export class WorksComponent {
     }
   ];
 
-  toggleItem(index: number): void {
-  this.works[index].isOpen = !this.works[index].isOpen;
-}
+  public startNumer = false;
+
+  toggleItem(index: boolean): void {
+    this.startNumer = index;
+    console.log(this.startNumer)
+  }
 }

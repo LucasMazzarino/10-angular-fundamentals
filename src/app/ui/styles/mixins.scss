@@ -1,15 +1,45 @@
-@mixin container($justify: start) {
+@use './variables.scss';
+
+@mixin container($justify: start){
   display: flex;
   align-items: center;
   justify-content: $justify;
+
 }
 
 
-@mixin container-gap($gap: 0) {
-  @include container;
-  gap: $gap;
+@mixin container-gap($gap: 0){
+    @include container;
+    gap: $gap
 }
 
-@function px-to-rem($px, $base: 16) {
-  @return $px / $base * 1rem;
+@mixin container-direction($direction: row) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: center;
+    justify-content: flex-start;
 }
+
+@mixin bottom-underline($color: #00ff00, $height: 3px, $duration: 0.3s, $position: 8px) {
+    position: relative;
+  
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: $position;
+      left: 0;
+      width: 0%;
+      height: $height;
+      background-color: $color;
+      transition: width $duration ease-in-out;
+    }
+  
+    &:hover::after {
+      width: 100%;
+    }
+  }
+
+
+@function color-shade($color, $percent: 10%) {
+    @return mix(white, $color, $percent);
+  }

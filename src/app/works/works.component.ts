@@ -76,10 +76,9 @@ export class WorksComponent {
     }
   ];
 
-  public startNumer = false;
+  public startState = false;
 
-  toggleItem(index: boolean): void {
-    this.startNumer = index;
-    console.log(this.startNumer)
+  toggleItem(state: boolean): void {
+    this.startState = state;
   }
 }

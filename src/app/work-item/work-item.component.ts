@@ -1,10 +1,6 @@
 import { Component, EventEmitter,Input , input, output } from '@angular/core';
 import { Work } from '../interface/work.interface';
 
-interface state{
-  isOpen: boolean;
-  id: number;
-}
 @Component({
   selector: 'app-work-item',
   templateUrl: './work-item.component.html',
@@ -13,10 +9,12 @@ interface state{
 export class WorkItemComponent {
   @Input() work!: Work;
   public index = input<number>();
-  public onClick = output<state>();
-  public isOpen = true
+  public onClick = output<boolean>();
+  public isOpen = false
 
   HandleItem(): void {
-    this.onClick.emit({isOpen: this.isOpen, id: this.index? this.index : 0});
+    this.work.isOpen = !this.work.isOpen;
+    this.onClick.emit(this.isOpen = !this.isOpen);
+    console.log(this.isOpen)
   }
 }

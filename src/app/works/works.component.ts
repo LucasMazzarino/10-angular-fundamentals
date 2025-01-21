@@ -15,6 +15,7 @@ export class WorksComponent {
       name: 'APPLE',
       date: '(2023+)',
       type: 'PD&M DESIGN',
+      hasExtraInfo: false,
       extraInfo: '',
       isOpen: false
     },
@@ -22,6 +23,7 @@ export class WorksComponent {
       name: 'AMAZON',
       date: '(2021 — 2023)',
       type: 'A. DESIGN DIRECTOR',
+      hasExtraInfo: true,
       extraInfo:
         'Brand building all new to world hardware and features for fitness brand Amazon Halo. Leading creative development of projects across marketing, product and content studio.',
       isOpen: false
@@ -30,6 +32,7 @@ export class WorksComponent {
       name: 'CRUISE',
       date: '(2019 — 2021)',
       type: 'BRAND DESIGN LEAD',
+      hasExtraInfo: true,
       extraInfo:
         'Developed brand visuals and language to prepare Cruise self-driving cars for market. Partnered with product and marketing to test and implement brand vision.',
       isOpen: false
@@ -38,6 +41,7 @@ export class WorksComponent {
       name: 'UBER',
       date: '(2018 — 2019)',
       type: 'DESIGN LEAD',
+      hasExtraInfo: true,
       extraInfo:
         'Lead rebrand of Uber Freight and art directed brand photoshoots & videos. Collaborated with global design team to update identity and build new website.',
       isOpen: false
@@ -46,6 +50,7 @@ export class WorksComponent {
       name: 'APPLE*',
       date: '(2016 — 2018)',
       type: 'ART DIRECTOR',
+      hasExtraInfo: true,
       extraInfo:
         'Contracted with interactive design team [*via Critical Mass] to design new user experience for .com retail. Designed a singular user account destination. Created videos and interactive experiences for MacBook Pro, iPhone, and Apple Watch.',
       isOpen: false
@@ -54,6 +59,7 @@ export class WorksComponent {
       name: 'SOUNDCLOUD',
       date: '(2014 — 2016)',
       type: 'SENIOR DESIGNER',
+      hasExtraInfo: true,
       extraInfo:
         'Created brand & product integrations for SoundCloud Go, with UXR & product. Created media partnership campaigns. Designed website & assets for advertising, On SoundCloud program, and creator genre onboarding.',
       isOpen: false
@@ -62,6 +68,7 @@ export class WorksComponent {
       name: 'BMF MEDIA',
       date: '(2013 — 2014)',
       type: 'DESIGNER',
+      hasExtraInfo: true,
       extraInfo:
         'Designed 10 year anniversary rebrand. Designed environment and collateral for custom & platform events. Worked closely with clients like Toyota, Dockers, H&M, AT&T and Dickies.',
       isOpen: false
@@ -70,6 +77,7 @@ export class WorksComponent {
       name: 'TH PRODN.',
       date: '(2012 — 2013)',
       type: 'DESIGNER',
+      hasExtraInfo: true,
       extraInfo:
         'Concepted and rendered builds for large scale client activations. Worked with clients and vendors to produce all graphic and fabricated assets. Art directed on-site event production and oversaw employer re-brand.',
       isOpen: false

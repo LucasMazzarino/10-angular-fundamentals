@@ -7,23 +7,17 @@
     <menu class="menu">
       <li class="menu__item menu__item--logo">
         <a class="menu__link" href="#" aria-label="Ir al Home">
-          <img src="./images/logo.png" alt="Logo de la página" class="menu__logo">
+          <img src="./images/logo.png" alt="Logo de la página" class="menu__logo" />
         </a>
       </li>
       <li class="menu__item menu__item--links">
         <ul class="menu__links">
-          <li class="menu__link-item">
-            <a class="menu__link" href="#" aria-label="Ir al Profile">01. Profile</a>
-          </li>
-          <li class="menu__link-item">
-            <a class="menu__link" href="#" aria-label="Ir al Work">02. Work</a>
-          </li>
-          <li class="menu__link-item">
-            <a class="menu__link" href="#" aria-label="Ir al Contact">✻ Contact</a>
-          </li>
-          <li class="menu__link-item">
-            <a class="menu__link" href="#" aria-label="Ir a LinkedIn">✻ LinkedIn</a>
-          </li>
+          @for (item of menuItems; track $index) {
+            <app-menu-items 
+              [link]="item.link"
+              [label]="item.label">
+            </app-menu-items>
+          }
         </ul>
       </li>
     </menu>

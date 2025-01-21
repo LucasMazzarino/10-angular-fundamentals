@@ -4,14 +4,13 @@
         <span class="hero__design">(DESIGN ©2024)</span>
       </h1>
     </div>
-    <img src="./images/image1.gif" alt="Imagen de Apple Watch" title="Imagen de Apple Watch" class="hero__image hero__image--1" role="img" aria-label="Apple Watch">
-    <img src="./images/image2.jpg" alt="Imagen de deportista" title="Imagen de deportista" class="hero__image hero__image--2" role="img" aria-label="Deportista">
-    <img src="./images/image3.jpg" alt="Imagen de modelo" title="Imagen de modelo" class="hero__image hero__image--3" aria-label="Modelo">
-    <img src="./images/image4.gif" alt="Imagen de Smart Watch" title="Imagen de Smart Watch" class="hero__image hero__image--4" aria-label="Smart Watch">
-    <img src="./images/image5.gif" alt="Imagen de oro falso" title="Imagen de oro falso" class="hero__image hero__image--5" aria-label="Oro falso">
-    <img src="./images/image6.jpg" alt="Imagen de pintura" title="Imagen de pintura" class="hero__image hero__image--6" aria-label="Pintura">
-    <img src="./images/image7.gif" alt="Imagen de celular" title="Imagen de celular" class="hero__image hero__image--7" aria-label="Celular">
-    <img src="./images/image8.png" alt="Imagen de auto" title="Imagen de auto" class="hero__image hero__image--8" aria-label="Auto">
+    @for (image of images; track $index){
+      <img src="{{image.src}}"
+      alt="{{image.alt}}" 
+      title="{{image.title}}"
+      class="hero__image hero__image--{{$index + 1}}" 
+      role="img" [attr.aria-label]="image.ariaLabel" />
+    }
   </section>
   <section class="experience">
     <div class="experience__container experience__container--name">

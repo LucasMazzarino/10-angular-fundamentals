@@ -1,0 +1,21 @@
+@use "../ui/styles/mixins.scss";
+
+.menu__link {
+  font-family: Helvetica, sans-serif;
+  color: #000;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 16px;
+  position: relative;
+  transition: color 0.3s;
+
+  @include mixins.bottom-underline();
+
+  &:hover {
+    color: inherit;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}

@@ -1,0 +1,19 @@
+<button
+  class="works__toggle"
+  aria-label="Abrir descripción"
+  (click)="toggle()"
+>
+  <div class="works__details-wrapper">
+    <small class="works__type">{{ workType() }}</small>
+    <div
+      class="works__icon works__icon--container"
+      [class.is-open]="isOpen"
+      aria-hidden="true"
+    >
+      <div class="plus">
+        <div class="plus__vertical-line"></div>
+        <div class="plus__horizontal-line"></div>
+      </div>
+    </div>
+  </div>
+</button>
